@@ -6,210 +6,451 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js%22%3E"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js%22%3E"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/vendor/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/custom/style.css">
-    <title>Document</title>
+    <link href="http://fonts.cdnfonts.com/css/do-hyeon" rel="stylesheet">
+    <link href="http://fonts.cdnfonts.com/css/kanit" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/vendor/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/custom/style.css">
+    <title>Landing Page</title>
 </head>
 <body>
     <div id="wrapper">
-        <section id="floating_box">
-            <h3>Discuss Your Fun ding Options</h3>
-            <p>Schedule a 1:1 call with an Admissions officer to discuss the funding option that is right for you.</p>
-            <button>Chat with Admissions</button>
-        </section>
-        <div id="container">
-            <header>
-                <p>Next Cohort starts October 12th</p>
-                <img src="./image/icon/phone.png" alt="phone_image">
-                <span class="contact_number">(844) 446 3656</span>
-                <button>Talk To US</button>
-            </header>
-            <div id="sub_header">
-                <img src="./image/coding_dojo_logo_white_new.png" alt="Coding_Dojo_Logo_image">
-                <ul>
-                    <!-- <img src="./image/icon/Line 10.png" alt="Dropdown_Icon_Image"> -->
-                    <li>
-                        <span>Full-Time</span>
-                        <!-- <img src="./image/icon/Line 10.png" alt="Dropdown_Icon_Image"> -->
-                    </li>
-                    <li>
-                        <span>Part-Time</span>
-                    <li>
-                        <span>Dojo Difference</span>
-                    </li>
-                    <li>
-                        <span>Online Campus</span>
-                    </li>
-                    <li>
-                        <span>Curriculum</span>
-                    </li>
-                    <li>
-                        <span>Corporate Training</span>
-                    </li>
-                </ul>
-                <button>Apply</button>
+        <header>
+            <div id="header">
+                <div id="header_container">
+                    <p>Next Cohort starts October 12th</p>
+                    <img src="./assets/image/icon/phone.png" alt="Phone Icon">
+                    <span>(844) 446 3656</span>
+                    <button class="talk_to_us_btn" type="button">Talk To Us</button>
+                </div>
             </div>
-            <section id="splash">
+            <div id="main_navigation_header">
+                <nav id="main_navigation_header_containter">
+                    <ul>
+                        <li id="cd_logo">
+                            <a href="#">
+                                <img src="./assets/image/logo/coding_dojo_logo_white_new.png" alt="Coding Dojo Logo">
+                            </a>
+                        </li>
+                        <li><a href="#">Full-Time <span class="show_more_icon"></span></a></li>
+                        <li><a href="#">Part-Time <span class="show_more_icon"></span></a></li>
+                        <li><a href="#">Dojo Difference <span class="show_more_icon"></span></a></li>
+                        <li><a href="#">Online Campus <span class="show_more_icon"></span></a></li>
+                        <li><a href="#">Curriculum <span class="show_more_icon"></span></a></li>
+                        <li><a href="#">Corporate Training</a></li>
+                        <li><button class="apply_btn" type="button">Apply</button></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section id="splash_section">
+            <div id="splash_container">
                 <h1>Fund Your Future At Coding Dojo</h1>
                 <p>When you commit to a big career change, the last thing you should be worrying about is the cost. </p>
-            </section>
-            <section id="funding_methods">
-                <h1>The 4 Most Popular Funding Methods</h1>
+            </div>
+        </section>
+        <section id="the_most_popular_section">
+            <div id="the_most_popular_container">
+                <h3>The 4 Most Popular Funding Methods</h3>
+                <div class="accordion" id="pay_in_full_accordion">
+                    <div class="card">
+                        <div class="card-header" id="pay_in_full_accordion_header">
+                            <!-- <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#pay_in_full_custom_content" aria-expanded="false" aria-controls="pay_in_full_custom_content">
+                                    <img src="./assets/image/PayInFull.png" alt="Pay In Full Image">
+                                    <h4>Pay In Full</h4>
+                                    <p>Receive a discount by paying up-front.</p>
+                                    <span class="arrowdown_icon"></span>
+                                </button>
+                            </h2> -->
+
+                            <!-- solve illegal H2 structure/usage; solve usage of position:absolute to some elements -->
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#pay_in_full_custom_content" aria-expanded="false" aria-controls="pay_in_full_custom_content">
+                                <img src="./assets/image/PayInFull.png" alt="Pay In Full Image">
+                                <div class="header_details">
+                                    <h4>Pay In Full</h4>
+                                    <p>Receive a discount by paying up-front.</p>
+                                </div>
+                                <span class="arrowdown_icon"></span>
+                            </button>
+                        </div>
+                        <div id="pay_in_full_custom_content" class="collapse" aria-labelledby="pay_in_full_accordion_header" data-parent="#pay_in_full_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi natus quam autem repudiandae itaque adipisci laboriosam, est numquam inventore. Ratione voluptatum ab quos earum! Perspiciatis doloribus minima cumque incidunt nobis?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="installment_plan_accordion">
+                    <div class="card">
+                        <div class="card-header" id="installment_plan_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#installment_plan_custom_content" aria-expanded="false" aria-controls="installment_plan_custom_content">
+                                    <img src="./assets/image//InstallmentPlans.png" alt="Installment Plan Image">
+                                    <h4>Installment Plan</h4>
+                                    <p>If you don’t want to pay all at once. </p>
+                                    <span class="arrowdown_icon"></span>
+                            </h2>
+                        </div>
+                        <div id="installment_plan_custom_content" class="collapse" aria-labelledby="installment_plan_accordion_header" data-parent="#installment_plan_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi natus quam autem repudiandae itaque adipisci laboriosam, est numquam inventore. Ratione voluptatum ab quos earum! Perspiciatis doloribus minima cumque incidunt nobis?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="accordion" id="ascent_accordion">
+                    <div class="card">
+                        <div class="card-header" id="ascent_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ascent_custom_content" aria-expanded="false" aria-controls="ascent_custom_content">
+                                    <img src="./assets/image/AscentFinancingLogo.png" alt="Ascent Financing Image">
+                                    <h4>Ascent Financing</h4>
+                                    <p>For financing your program.</p>
+                                    <span class="arrowdown_icon"></span>
+                            </h2>
+                        </div>
+                        <div id="ascent_custom_content" class="collapse" aria-labelledby="ascent_accordion_header" data-parent="#ascent_accordion">
+                            <div class="card-body">
+                                <p class="apply_for">
+                                    Apply for a loan that covers 100% of tuition costs with our third-party partner, Ascent. Ascent offers students flexible loan options including Deferred Repayment options (payments begin 3 months post-graduation). A soft credit check is required and seeing if you qualify only takes 3-5 minutes.
+                                </p>
+                                <p class="hard_credit">
+                                    A hard credit check IS required to finalize the loan documents after approval. Utilizing a cosigner is an option with Ascent. Additional terms may apply; see application for more details.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="climb_credit_accordion">
+                    <div class="card">
+                        <div class="card-header" id="climb_credit_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#climb_credit_custom_content" aria-expanded="false" aria-controls="climb_credit_custom_content">
+                                    <img src="./assets/image/ClimbCreditLogo.png" alt="Climb Credit Image">
+                                    <h4>Climb Credit</h4>
+                                    <p>For financing your program.</p>
+                                    <span class="arrowdown_icon"></span>
+                            </h2>
+                        </div>
+                        <div id="climb_credit_custom_content" class="collapse" aria-labelledby="climb_credit_header" data-parent="#climb_credit_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi natus quam autem repudiandae itaque adipisci laboriosam, est numquam inventore. Ratione voluptatum ab quos earum! Perspiciatis doloribus minima cumque incidunt nobis?
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                
+                <div class="accordion" id="ascent_accordion">
+                    <div class="card">
+                        <div class="card-header" id="ascent_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#ascent_custom_content" aria-expanded="false" aria-controls="ascent_custom_content">
+                                    <img src="./assets/image/AscentFinancingLogo.png" alt="Ascent Financing Image">
+                                    <h4>Ascent Financing</h4>
+                                    <p>For financing your program.</p>
+                                    <span class="arrowdown_icon"></span>
+                            </h2>
+                        </div>
+                        <div id="ascent_custom_content" class="collapse" aria-labelledby="ascent_accordion_header" data-parent="#ascent_accordion">
+                            <div class="card-body">
+                                <p class="apply_for">
+                                    Apply for a loan that covers 100% of tuition costs with our third-party partner, Ascent. Ascent offers students flexible loan options including Deferred Repayment options (payments begin 3 months post-graduation). A soft credit check is required and seeing if you qualify only takes 3-5 minutes.
+                                </p>
+                                <p class="hard_credit">
+                                    A hard credit check IS required to finalize the loan documents after approval. Utilizing a cosigner is an option with Ascent. Additional terms may apply; see application for more details.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="climb_credit_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#climb_credit_custom_content" aria-expanded="false" aria-controls="climb_credit_custom_content">
+                                    <img src="./assets/image/ClimbCreditLogo.png" alt="Climb Credit Image">
+                                    <h4>Climb Credit</h4>
+                                    <p>For financing your program.</p>
+                                    <span class="arrowdown_icon"></span>
+                            </h2>
+                        </div>
+                        <div id="climb_credit_custom_content" class="collapse" aria-labelledby="climb_credit_header" data-parent="#ascent_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eligendi natus quam autem repudiandae itaque adipisci laboriosam, est numquam inventore. Ratione voluptatum ab quos earum! Perspiciatis doloribus minima cumque incidunt nobis?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="gauge_your_potential_savings">
+            <div id="gauge_container">
+                <h3>Gauge Your Potential Savings</h3>
+                <!-- add ID to <ul> -->
                 <ul>
+                    <!-- add class to <li> -->
                     <li>
-                        <img src="./image/PayInFull.png" alt="PayInFull_image" class="left_image">
-                        <h4>Pay in Full</h4>
-                        <p>Receive a discount by paying up-front.</p>
-                        <img src="./image/icon/arrow-down-1.png" alt="Arrowdown_image" class="right_image">
-                    </li>
-                    <li>
-                        <img src="./image/InstallmentPlans.png" alt="installment_plans_image" class="left_image">
-                        <h4>Installment Plans</h4>
-                        <p>If you don’t want to pay all at once.</p>
-                        <img src="./image/icon/arrow-down-1.png" alt="Arrowdown_image" class="right_image">
-                    </li>
-                    <li>
-                        <img src="./image/AscentFinancingLogo.png" alt="installment_plans_image" class="left_image">
-                        <h4>Ascent Financing</h4>
-                        <p>For financing your program.</p>
-                        <img src="./image/icon/arrow-up-1.png" alt="Arrowup_image" class="right_image">
-                        <p class="first_paragraph">
-                            Apply for a loan that covers 100% of tuition costs with our third-party partner, Ascent. Ascent offers students flexible loan options including Deferred Repayment options (payments begin 3 months post-graduation). A soft credit check is required and seeing if you qualify only takes 3-5 minutes.
-                        </p>
-                        <p class="second_paragraph">
-                            A hard credit check IS required to finalize the loan documents after approval. Utilizing a cosigner is an option with Ascent. Additional terms may apply; see application for more details.
-                        </p>
-                    </li>
-                    <li>
-                        <img src="./image/ClimbCreditLogo.png" alt="installment_plans_image" class="left_image">
-                        <h4>Climb Credit</h4>
-                        <p>For financing your program.</p>
-                        <img src="./image/icon/arrow-up-1.png" alt="Arrowup_image" class="right_image">
-                    </li>
-                </ul>
-            </section>
-            <section id="gauge_your_potencial_savings"> 
-                <h1>Gauge Your Potencial Savings</h1>
-                <ul>
-                    <li>
+                        
                         <h5>Early Registration</h5>
-                        <div>$250</div>
-                        <p>Pay your deposit within 5 days of 
-                            your acceptance to Coding Dojo and receive $250 off* your program.</p>
+                        <button type="button" id="btn_early" class="savings_btn"><span class="blue_circle"></span>$250</button>
+                        <p>Pay your deposit within 5 days of your acceptance to Coding Dojo and receive $250 off* your program.</p>
                     </li>
                     <li>
                         <h5>Open House</h5>
-                        <div>$100</div>
+                        <button type="button">$100</button>
                         <p>Attend <span class="underline">your program’s Open House</span> and unlock $100 off with a unique promotional voucher. </p>
                     </li>
                     <li>
                         <h5>Scholarship</h5>
-                        <div>$1-1500</div>
+                        <button type="button">$1-1500</button>
                         <p>All Coding Dojo applicants can apply for one partial-scholarship ranging from $1,000 -$1,500, dependent on the program and scholarship awarded. </p>
                     </li>
                     <li>
                         <h5>Pay in Full</h5>
-                        <div class="border_radius">$1500</div>
+                        <button type="button" id="btn_border_radius">$1500</button>
                         <p>Pay in full upon enrollment and save $1500 off your tuition!</p>
                     </li>
                     <li class="youve_saved">
-                        <h1>You've Saved</h1>
+                        <h3>You've Saved</h3>
                         <span>$3,350</span>
                     </li>
                 </ul>
                 <p>*Early Registration Discount is only applicable if no other deposit adjustments are applied to the program and the deposit is not covered by a third-party. </p>
-                <img src="./image/border_cat.png" alt="cat_image">
-            </section>
-            <section id="how_to_fund">
-                <h1>How To Fund Your Bootcamp</h1>
+                <!-- <img src="./assets/image/border_cat.png" alt="cat_image"> -->
+            </div>
+        </section>
+        <section id="how_to_fund_section">
+            <div id="how_to_fund_container">
+                <h3>How to Fund Your Bootcamp</h3>
                 <p>Our financing options designed with every student in mind so they can kickstart their career in tech without hassle and worry. There's a funding option for everyone and every Coding Dojo program. </p>
-                <ul>
-                    <li></li>
-                </ul>
-            </section>
-            <section id="when_should_you_start">
-                <h1>When Should You Start Thinking About Funding</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col"></th>
+                            <th scope="col">Any Coding Dojo Program</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="fund_method">Pay in Full</td>
+                            <td class="fund_status">Knock $1500 off the price. 😱</td>
+                        </tr>
+                        <tr>
+                            <td class="fund_method">Installment Plan</td>
+                            <!-- replace <img> with another element, style using CSS -->
+                            <td class="fund_status"><span class="check_circle"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="fund_method">Ascent Financing</td>
+                            <td class="fund_status"><span class="check_circle"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="fund_method">Climb Credit</td>
+                            <td class="fund_status"><span class="check_circle"></span></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section id="when_should_section">
+            <div id="when_should_container">
+                <h3>When Should You Start Thinking About Funding</h3>
                 <p>The first step on your journey to coding bootcamp will always be to choose & be approved for the program you want to pursue. Once you confirm your spot in bootcamp, then you can work with our Admissions team on the best way to secure the financial support you’ll need.</p>
+                <!-- add class to all <ul> -->
                 <ul>
-                    <li>
-                        <img src="./image/SpeaktoAdmissions.png" alt="SpeaktoAdmissions_image">
-                        <h5>Speak to Admissions</h5>
-                        <p>Our admissions advisors are well-versed in all of our financing options, and can help you decide what is best for you based on your financial situation and your goals.</p>
-                    </li>
-                    <li>
-                        <img src="./image/ApplyToProgramGetAccepted.png" alt="ApplyToProgramGetAccepted_image">
-                        <h5>Apply to Your Program + Get Accepted</h5>
-                        <p>Review our programs on our website, chat with Admissions, and attend an Open House to decide on a program best suited for you then apply! The application takes no more than 5 minutes from start to finish.</p>
-                    </li>
-                    <li>
-                        <img src="./image/SecureYourFundingMethod.png" alt="SecureYourFundingMethod_image">
-                        <h5>Secure Your Funding Method</h5>
-                        <p>After you have finalized which financing option or payment method you'll be using, you'll enroll via our enrollment platform.</p>
-                    </li>
-                    <li>
-                        <img src="./image/StartCodingBootcamp.png" alt="StartCodingBootcamp_image">
-                        <h5>Start Coding Bootcamp</h5>
+                    <li class="thinking_about_funds_images"><img src="./assets/image/SpeaktoAdmissions.png" alt="Speak to Admissions Image"></li>
+                    <li class="thinking_about_funds_content"><h3>Speak to Admissions</h3><p>Our admissions advisors are well-versed in all of our financing options, and can help you decide what is best for you based on your financial situation and your goals.</p></li>
+                </ul>
+                <ul>
+                    <li class="thinking_about_funds_images"><img src="./assets/image/ApplyToProgramGetAccepted.png" alt="Apply To Program Image"></li>
+                    <li class="thinking_about_funds_content"><h3>Apply to Your Program + Get Accepted</h3><p>Review our programs on our website, chat with Admissions, and attend an Open House to decide on a program best suited for you then apply! The application takes no more than 5 minutes from start to finish.</p></li>
+                </ul>
+                <ul>
+                    <li class="thinking_about_funds_images"><img src="./assets/image/SecureYourFundingMethod.png" alt="Secure Your Funding Method Image"></li>
+                    <li class="thinking_about_funds_content"><h3>Secure Your Funding Method</h3><p>After you have finalized which financing option or payment method you'll be using, you'll enroll via our enrollment platform.</p></li>
+                </ul>
+                <ul>
+                    <li class="thinking_about_funds_images"><img src="./assets/image/StartCodingBootcamp.png" alt="Start Coding Bootcamp Image"></li>
+                    <li class="thinking_about_funds_content">
+                        <h3>Start Coding Bootcamp</h3>
                         <p>Wahoo! You’re a Coding Dojo Ninja, now! Get signed into your tools, complete your pre-course work, meet your classmates, and get excited for the first day of class. You’re on your way to a brand new career in tech!</p>
                     </li>
                 </ul>
-            </section>
-            <section id="get_hired">
-                <h1>Get Hired By the Top Names in Tech</h1>
-                <ul>
-                    <li>
-                        <img src="./image/google.png" alt="google_image">
-                        <img src="./image/amazon.png" alt="amazon_image">
-                        <img src="./image/airbnb.png" alt="airbnb_image">
-                        <img src="./image/dropbox.png" alt="dropbox_image">
-                        <img src="./image/apple.png" alt="apple_image">
-                    </li>
-                    <li>
-                        <img src="./image/uber.png" alt="uber_image">
-                        <img src="./image/slack.png" alt="slack_image">
-                        <img src="./image/twitter.png" alt="twitter_image">
-                        <img src="./image/facebook.png" alt="facebook_image">
-                        <img src="./image/linkedin.png" alt="linkedin_image">
+
+                <!-- Use this structure: -->
+                <!-- 
+                <ul class="">
+                    <li class="">
+                        <img src="" alt="">
+                        <div>
+                            <h3></h3>
+                            <p></p>
+                        </div>
                     </li>
                 </ul>
-            </section>
-            <section id="quote">
-                <img src="./image/quotation_mark.png" alt="quotation_background_image">
-                <div>
-                    <p class="quote">I just know that I’m more excited about my own future now than I ever have been in my life. Hey, thanks, Dojo.</p>
-                    <div class="box"></div>
-                    <div>
-                        <p class="name">Hannah Preisinger</p>
-                        <p>Coding Dojo Alumni, Production Engineer at Bungie</p>
+                 -->
+            </div>
+        </section>
+        <section id="get_hired_section">
+            <div id="get_hired_container">
+                <h3>Get Hired By the Top Names in Tech</h3>
+                <table id="top_companies_table" class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <td><a href="#"><img src="./assets/image/logo/google.png" alt="Google Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/amazon.png" alt="Amazon Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/airbnb.png" alt="Airhub Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/dropbox.png" alt="Dropbox Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/apple.png" alt="Apple Logo"></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#"><img src="./assets/image/logo/uber.png" alt="Uber Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/slack.png" alt="Slack Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/twitter.png" alt="Twitter Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/facebook.png" alt="Facebook Logo"></a></td>
+                            <td><a href="#"><img src="./assets/image/logo/linkedin.png" alt="Linkedin Logo"></a></td>
+                        </tr>
+                    </tbody>
+                  </table>
+            </div>
+        </section>
+        <section id="quote_section">
+            <div id="quote_container">
+                <span id="quote_background"></span>
+                <p>I just know that I’m more excited about my own future now than I ever have been in my life. Hey, thanks, Dojo.</p>
+                <ul>
+                    <li><span></span></li>
+                    <li><h3>Hannah Preisinger</h3><p>Coding Dojo Alumni, Production Engineer at Bungie</p></li>
+                </ul>
+            </div>
+        </section>
+        <section id="faq_section">
+            <div id="faq_container">
+                <h3>FAQ's</h3>
+                <div class="accordion" id="question_one_accordion">
+                    <div class="card">
+                        <div class="card-header" id="question_one_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#question_one_custom_content" aria-expanded="false" aria-controls="question_one_custom_content">
+                                    <h4>Question 1?</h4>
+                                    <span class="arrowdown_icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question_one_custom_content" class="collapse" aria-labelledby="question_one_accordion_header" data-parent="#question_one_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </section>
-            <section id="faqs">
-                <h1>FAQs</h1>
-                <ul>
-                    <li class="question1">
-                        <h4>Question 1?</h4>
-                        <img src="./image/icon/arrow-up-1.png" alt="Arrowup_image" class="right_image">
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                    </li>
-                    <li>
-                        <h4>Question 2?</h4>
-                        <img src="./image/icon/arrow-down-1.png" alt="Arrowdown_image" class="right_image">
-                    </li>
-                    <li>
-                        <h4>Question 3?</h4>
-                        <img src="./image/icon/arrow-down-1.png" alt="Arrowdown_image" class="right_image">
-                    </li>
-                    <li>
-                        <h4>Question 4?</h4>
-                        <img src="./image/icon/arrow-up-1.png" alt="Arrowup_image" class="right_image">
-                    </li>
-                </ul>
-            </section>
-            <footer></footer>
-        </div>
+                <div class="accordion" id="question_two_accordion">
+                    <div class="card">
+                        <div class="card-header" id="question_two_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#question_two_custom_content" aria-expanded="false" aria-controls="question_two_custom_content">
+                                    <h4>Question 2?</h4>
+                                    <span class="arrowdown_icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question_two_custom_content" class="collapse" aria-labelledby="question_two_accordion_header" data-parent="#question_two_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="question_three_accordion">
+                    <div class="card">
+                        <div class="card-header" id="question_three_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#question_two_custom_content" aria-expanded="false" aria-controls="question_two_custom_content">
+                                    <h4>Question 3?</h4>
+                                    <span class="arrowdown_icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question_two_custom_content" class="collapse" aria-labelledby="question_three_accordion_header" data-parent="#question_three_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion" id="question_four_accordion">
+                    <div class="card">
+                        <div class="card-header" id="question_four_accordion_header">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#question_four_custom_content" aria-expanded="false" aria-controls="question_four_custom_content">
+                                    <h4>Question 4?</h4>
+                                    <span class="arrowdown_icon"></span>
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="question_four_custom_content" class="collapse" aria-labelledby="question_four_accordion_header" data-parent="#question_four_accordion">
+                            <div class="card-body">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="footer_container">
+                <div id="list_signup_division">
+                    <div id="list_div">
+                        <div class="footer_list_content">
+                            <h3>CAMPUSES</h3>
+                            <ul class="footer_list">
+                                <li>Online</li>
+                                <li>Bellevue, WA</li>
+                                <li>Boise, ID</li>
+                                <li>Chicago, IL</li>
+                                <li>Los Angeles, CA</li>
+                                <li>Silicon Valley, CA</li>
+                            </ul>
+                        </div>
+
+                        <ul>
+                            <li class="title_list">PARTNERSHIP</li>
+                            <li>For Governments</li>
+                            <li>For Enterprise</li>
+                            <li>Amazon Career Course</li>
+                        </ul>
+                        <ul>
+                            <li class="title_list">RESOURCES</li>
+                            <li>Algorithm App</li>
+                            <li>Blog</li>
+                            <li>FAQ</li>
+                            <li>Tech for America</li>
+                        </ul>
+                        
+                        <ul>
+                            <li class="title_list">CAMPUSES</li>
+                            <li>Online</li>
+                            <li>Bellevue, WA</li>
+                            <li>Boise, ID</li>
+                            <li>Chicago, IL</li>
+                            <li>Los Angeles, CA</li>
+                            <li>Silicon Valley, CA</li>
+                        </ul>
+                    </div>
+                    <div id="signup_div"></div>
+                </div>
+                <div id="call_us_div">
+
+                </div>
+            </div>
+        </footer>
     </div>
 </body>
 </html>
+
+
